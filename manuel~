@@ -1,0 +1,46 @@
+Alphabet	[Génère un table de caractères]
+  (Args)
+	array[
+	  alphabet	String		Par defaut "abcdefghijklmnopqrstuvwxtz"
+	  maj		Int			Génère les majuscule de l'alphabet
+	  num		Int			Génère les chiffres de la base 10
+	  accent	Int			Code les accents en utf-8
+	  special	Int			Génère les caractères spéciaux
+	  hexa		Int			Remplace l'alphabet par la base 16
+	  binaire	Int			Remplace l'alphabet par la base 2
+	  space		Int			Chiffre les espaces
+	  ascii		Int			Utilise les codes ascii
+	  debug		Int			Mode debug
+	  sub		Int			Indique si c'est une table de substitution
+	]
+  (Vars)
+	option_*	Int			Option correspondant a un argument
+	arr			Array		Table de caractères
+	string		String		Table de caractères
+	size		Int			Taille de la table de caractères.
+  (Func)
+	clean_str	String		Transforme une chaine en fonction de la table
+	declean_str	String		Inverse la transformation	
+	__get		String		Récupère les variables
+
+
+Code	[Génère le code d'un message en fonction d'une table de caractères]
+  (Args)
+	alphabet	Obj			Table de caractères
+	message		String		Message a chiffrer
+  (Vars)
+	msg			String		contient le message
+	code		Array		Code généré en fonction de la table de caractères
+	code_b		Array		Code généré en base 2
+	code_h		Array		Code généré en base 16
+  (Func)
+	modifier_msg	Str/Arr	Modifie le message(str) ou le code(array) et change les autres
+	modifier_hexa	Str/Arr	Modifie le code hexadecimal et change les autres
+	modifier_bin	Str/Arr	Modifie le code binaire et change les autres
+	get_msg					Retourne le message (str)
+	get_msg_bin				Retourne le code binaire (str)
+	get_msg_hexa			Retourne le code hexadecimal (str)
+	get_code				Retourne le code du message (array)
+	get_code_bin			Retourne le code binaire (array)
+	get_code_hexa			Retourne le code hexadecimal (array)
+	get_alpha				Retourne la table de caratères utilisée
